@@ -1,42 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
-
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+    font-weight: bold;
+ }
 body{
-background:#00BFFF;  
-font-family: 'poppins', sans-serif;
+background:#6AB29B;  
+font-family: myFirstFont;
 }
 
 .container{
-padding:30px;   
-background:white;
+padding: 25px;   
+background: #fff;
 position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-border-radius:10px;
+border-radius:20px;
 width:355px;
-padding-bottom:5px;
 }
 
-.container.active{
+.active{
 padding-bottom:35px;       
 }
-
-
-.container .app-title{
+.app-title{
 font-size:16px;
-color:#222;
-}
-
-.container .app-title i{
+color:#00BFFF;
 padding-right:3px;       
 }
-
-.container .userInput{
+.userInput{
 all:unset; 
 height:40px;
 width:100%;
@@ -44,33 +40,50 @@ border-bottom:2px solid black;
 font-size:16px;
 margin-top:20px;
 }
-
-.container button{
+.btn {
 all:unset;  
 height:45px;
 width:100%;
-background:#00BFFF;  
+background: rgba(106, 178, 155, 0.9);  
 color:white;
 display:flex;
 justify-content:center;
 align-items:center;
 text-transform:capitalize;
-border-radius:3px;
+border-radius: 12px;
 margin-top:8px;
 cursor:pointer;
 }
 
-.container .barcode-box{
+.btnn {
+    display: inline-block;
+    width: 100%;
+    margin-top: 5px;
+}
+
+#downloadBtn {
+    display: none;
+    position: relative;
+    right: -90px;
+    background-color: #6AB29B;
+    color: white;
+    border-radius: 12px;
+    padding: 3px;
+}
+
+.barcode-box{
 height:0px; 
 width:100%;
 margin-top:25px;
+border: 2px solid #000;
 border-radius:3px;
 transition:all .2s;
 }
 
-.container.active .barcode-box{
+.active 
+.barcode-box {
 height:200px;   
-border:1px solid grey;
+border:1px solid #000;
 transition:all .2s;
 }
 
@@ -85,4 +98,16 @@ margin-top:15px;
 ::selection {
 background:rgb(100, 149, 237, 0.8);
 color:white;
+}
+
+.container:hover {
+    border: 5px solid #00BFFF;
+}
+
+.userInput:hover {
+    border-bottom:5px solid #6AB29B;
+}
+
+.btn:hover {
+    background-color: rgba(106, 178, 155, 1);
 }
