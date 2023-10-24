@@ -36,7 +36,7 @@ padding-right:3px;
 all:unset; 
 height:40px;
 width:100%;
-border-bottom:2px solid black;
+border-bottom:3px solid #6AB29B;
 font-size:16px;
 margin-top:20px;
 }
@@ -105,9 +105,12 @@ color:white;
 }
 
 .userInput:hover {
-    border-bottom:5px solid #6AB29B;
+    border-bottom:5px solid #00BFFF;
 }
 
 .btn:hover {
-    background-color: rgba(106, 178, 155, 1);
+    background-color: #00BFFF;
+}
+#downloadBtn:hover {
+    background-color: #00BFFF;
 }
